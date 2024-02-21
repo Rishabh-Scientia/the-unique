@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the proposal(2)</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    .main{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("love0.1.jpeg");
+        background-size: contain;
+        padding: 10px;
+    }
+    .leftcontan{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height:400px;;
+        width: 400px;
+        background:transparent;
+        box-shadow: 5px 5px 5px rgb(36, 36, 36);
+        border-radius: 50px;
+        border: solid black 2px;
+        transition: linear 0.8s;
+
+    }
+    .leftcontan:hover{
+        scale: 1.1;
+    }
+    .para1{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 30px;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0.19940476190476186) 0%, rgba(0,0,0,1) 100%);
+        color: rgb(244, 209, 8);
+    }
+    .input2::placeholder{
+        color: rgb(247, 245, 245);
+    }
+    #textfeed{
+        height: 150px;
+        width: 250px;
+        border-radius: 5px;
+        padding: 8px;
+        font-family: 'Times New Roman', Times, serif ;
+        font-size: 25px;
+        font-weight: 600;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0.19940476190476186) 0%, rgba(0,0,0,1) 100%);
+        color: rgb(244, 209, 8);
+        border: solid rgb(233, 222, 222) 2px;
+    }
+    .sendbut{
+        margin-top: 50px;
+        border: none;
+        border-radius: 50px;
+        width: 200px;
+        height: 40px;
+        background-color: rgb(247, 210, 28);
+        font-weight: 400;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        transition: linear 0.8s;
+    }
+    .sendbut:hover{
+        scale: 1.1;
+        background-color: rgb(57, 235, 17);
+        cursor: pointer;
+        color: aliceblue;
+    }
+    @media (max-width:400px) {
+        .leftcontan{
+            width:95%
+        }
+        .para1{
+            font-size: 30px;
+        }
+        
+        
+    }
+</style>
+<body>
+    <div class="main">
+        <form  action="https://api.web3forms.com/submit" method="POST"  class="leftcontan">
+            <p class="para1">Yours Response</p>
+            <input type="hidden" name="access_key" value="6ed24859-1027-4ff5-9af0-23fc8b51ecac">
+            <textarea name="message" id="textfeed" placeholder="Your  message..." class="input2"></textarea>
+            <button type="submit" class="sendbut">Send</button>
+        </form>
+    </div>
+    
+</body>
+</html>
